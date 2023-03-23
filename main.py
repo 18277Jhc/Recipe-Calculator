@@ -6,7 +6,19 @@
   
   TIP: Use assessment guide to help guide you through this Internal
 '''
+# Import the required library
+from tkinter import *
+from tkinter.simpledialog import askstring
+from tkinter.messagebox import showinfo
 
+# Create an instance of tkinter frame and window
+win=Tk()
+win.geometry("700x300")
+
+name = askstring('Name', 'What is Player name?')
+showinfo('Hello!', 'Hi, {}'.format(name))
+
+win.mainloop()
 print("Welcome to the Recipe Cost Calculator!\n")
 recipe_name = input("Please enter the name of the recipe: ")
 serving_size = int(input("Please enter the serving size: "))
